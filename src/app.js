@@ -5,6 +5,7 @@ const express=require('express')
 const hbs= require('hbs')
 
 const app=express()
+const port=process.env.PORT || 3000
 
 const path=require('path')
 //console.log(__dirname)
@@ -95,6 +96,6 @@ app.get('*', (req,res) =>{
     })
     //res.send('404 error')
 })
-app.listen(3000,function(){
-    console.log("Server is running on port 3000")
+app.listen(port,function(){
+    console.log("Server is running on " +port)  
 })
